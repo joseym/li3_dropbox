@@ -45,8 +45,9 @@ class Dropbox extends \lithium\core\Object {
 	 * Return the users oAuth token, to be stored for later call.
 	 * @return string hashed user oAuth credentials
 	 */
-	public function token(){
-		return $this->_token;
+	public function token($token = null){
+		if(!$token) return $this->_token;
+		return $this->_store->encrypt($token);
 	}
 
 	/**
