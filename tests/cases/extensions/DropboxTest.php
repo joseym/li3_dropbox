@@ -12,17 +12,17 @@ class DropboxTest extends \lithium\test\Unit {
 
 	function testAdd(){
 
-		// $this->adapter = Dropbox::add(array(
-		// 	'key' => 'abc',
-		// 	'secret' => 'defg'
-		// ));
+		$this->adapter = Dropbox::add(array(
+			'key' => 'abc',
+			'secret' => 'defg'
+		));
 
-		// $name = array_keys($this->adapter);
-		// $this->name = $name[0];
+		$name = array_keys($this->adapter);
+		$this->name = $name[0];
 
-		// $this->assertTrue(!empty($this->adapter));
-		// $this->assertEqual('default', $this->name);
-		// $this->assertEqual('Dropbox', $this->adapter['default']['adapter']);
+		$this->assertTrue(!empty($this->adapter));
+		$this->assertEqual('default', $this->name);
+		$this->assertEqual('Dropbox', $this->adapter['default']['adapter']);
 		
 	}
 
