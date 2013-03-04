@@ -3,6 +3,7 @@
 namespace li3_dropbox\extensions\adapter;
 use \Dropbox\OAuth\Storage\Encrypter;
 use \Dropbox\OAuth\Storage\Manual;
+use \Dropbox\OAuth\Storage\Session;
 use \Dropbox\OAuth\Consumer\Curl;
 use \Dropbox\API;
 
@@ -105,6 +106,14 @@ class Dropbox extends \lithium\core\Object {
 	 */
 	public function account(){
 		return $this->dropbox->accountInfo();
+	}
+
+	public function adapter(){
+		return $this->dropbox;
+	}
+
+	public function delete($path){
+		return $this->dropbox->delete($path);
 	}
 
 }
